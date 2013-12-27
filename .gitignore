@@ -1,0 +1,6 @@
+_*/*
+.bundle/*
+Gemfile.lock
+
+*.iml
+.idea/*
