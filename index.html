@@ -1,57 +1,118 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>robertcboll; by robertcboll</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <title>robertcboll;</title>
+
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/respond.js"></script>
+  <script src="javascripts/swipe.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="Shortcut Icon" href="/images/favicon.png">
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/robertcboll">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+</head>
+<body>
+  <div id="header">
+    <nav class="green">
+      <li class="right">&nbsp; }</li>
+      <li class="right"><a href="http://blog.robertcboll.com">blog</a></li>
+      <li class="right">&nbsp; | &nbsp;</li>
+      <li class="right"><a id="email" href="javascript: mail();">email</a></li>
+      <li class="right">{ &nbsp;</li>
+    </nav>
+  </div>
 
-    <div class="wrapper">
+  <div class="wrapper sticky-wrapper">
 
-      <section>
-        <div id="title">
-          <h1>robertcboll;</h1>
-          <p>software engineer</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/robertcboll">robertcboll</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+    <section>
+      <div id="title">
+        <h1>robertcboll;</h1>
+        <p>software engineer</p>
+        <hr>
+      </div>
+
+      <div id="content">
+        <p class="center">you can find me around; <a href="https://google.com#q=robertcboll" class="name">robertcboll</a></p>
+
+        <div id="social">
+          <div id='slider' class='swipe'>
+            <div class='swipe-wrap'>
+              <div>
+                <a href="https://github.com/robertcboll">
+                  <span class="entypo-github"></span>
+                </a>
+                <a href="http://www.linkedin.com/in/robertcboll">
+                  <span class="entypo-linkedin"></span>
+                </a>
+                <a href="http://www.twitter.com/robertcboll">
+                  <span class="entypo-twitter"></span>
+                </a>
+              </div>
+              <div>
+                <a href="http://www.rdio.com/people/robertcboll">
+                  <span class="entypo-rdio"></span>
+                </a>
+                <a href="skype:robertcboll?chat">
+                  <span class="entypo-skype"></span>
+                </a>
+                <a href="http://blog.robertcboll.com">
+                  <span class="entypo-tumblr"></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <h3>
-<a name="wwwrobertcbollcom" class="anchor" href="#wwwrobertcbollcom"><span class="octicon octicon-link"></span></a><a href="http://www.robertcboll.com">www.robertcboll.com</a>
-</h3>
-      </section>
+    <div class="push"></div>
+  </div>
 
+  <div class="wrapper">
+    <div class="footer">
+      <span class="credits right">Hosted on GitHub Pages &mdash; Based on a theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-25959308-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+  </div>
 
-  </body>
+  <script>
+    $(function() {
+      window.mySwipe = new Swipe(document.getElementById('slider'), {
+        auto: 6000
+      });
+      setupEmail();
+    });
+
+    function setupEmail() {
+      var email = 'robertcboll' + '@' + 'gmail' + '.com';
+      var anchor = $('a#email').prop('href', 'mailto:' + email);
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25959308-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
 </html>
