@@ -786,6 +786,21 @@ html, body {
   width: auto;
   padding: 0px 20px 0px 20px;
 }
+@media only screen and (max-width : 320px) {
+  #social {
+    min-width: 240px;
+    font-size: 80px;
+  }
+
+  #social span {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .credits {
+    font-size: 8px;
+  }
+
+}
 
 #social a {
   color: #ffeb9b;
