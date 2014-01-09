@@ -17,7 +17,6 @@
 
 	<script src="http://www.robertcboll.com/javascripts/jquery.js"></script>
 	<script src="http://www.robertcboll.com/javascripts/respond.js"></script>
-	<script src="http://www.robertcboll.com/javascripts/jquery.autosize.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -36,22 +35,28 @@
 		}
 
 		#search {
+			font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
 			background: transparent;
 			border: none;
 			width: 43px;
 			min-width: 43px;
-			max-width: 300px;
-			transition: width 0.25s;
+			max-width: 200px;
+			color: #ffeb9b;
+			-webkit-transition: width .25s linear;
+			-moz-transition: width .25s linear;
+			-o-transition: width .25s linear;
+			-ms-transition: width .25s linear;
+			transition: width .25s linear;
 		}
+
 		#search:focus {
 			outline: 0;
-
-			-webkit-transition: background-color .25s linear;
-			-moz-transition: background-color .25s linear;
-			-o-transition: background-color .25s linear;
-			-ms-transition: background-color .25s linear;
-			transition: background-color .25s linear;
-			color: #ffeb9b;
+			width: 200px;
+			-webkit-transition: width .25s linear;
+			-moz-transition: width .25s linear;
+			-o-transition: width .25s linear;
+			-ms-transition: width .25s linear;
+			transition: width .25s linear;
 		}
 
 		input#search:focus::-webkit-input-placeholder {
@@ -82,7 +87,7 @@
 			<li class="right">&nbsp; }</li>
 			<li class="right">
 				<form action="/search" method="get" >
-					<input id="search" type="text" name="q" value="{SearchQuery}" placeholder="search" data-autosize-input="{ 'space': 40}"/>
+					<input id="search" type="text" name="q" value="{SearchQuery}" placeholder="search"/>
 				</form>
 			</li>
 			<li class="right">{ &nbsp;</li>
@@ -238,6 +243,12 @@
 			</footer>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$('#search').blur(function(event) {
+			event.currentTarget.value = "";
+		});
+	</script>
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
