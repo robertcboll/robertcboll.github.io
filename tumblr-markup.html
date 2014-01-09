@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+
+	<title>{Title}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}"/>{/block:Description}
+
+	<link rel="stylesheet" href="http://www.robertcboll.com/stylesheets/styles.css">
+	<link rel="stylesheet" href="http://www.robertcboll.com/stylesheets/pygment_trac.css">
+
+
+	<script src="http://www.robertcboll.com/javascripts/jquery.js"></script>
+	<script src="http://www.robertcboll.com/javascripts/respond.js"></script>
+	<script src="http://www.robertcboll.com/javascripts/jquery.autosize.js"></script>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="http://www.robertcboll.com/stylesheets/ie.css">
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="Shortcut Icon" href="http://www.robertcboll.com/images/favicon.png">
+
+	<meta name="text:Disqus Shortname" content=""/>
+
+	<style type="text/css">
+		.post-details {
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+
+		#search {
+			background: transparent;
+			border: none;
+			width: 43px;
+			min-width: 43px;
+			max-width: 300px;
+			transition: width 0.25s;
+		}
+		#search:focus {
+			outline: 0;
+
+			-webkit-transition: background-color .25s linear;
+			-moz-transition: background-color .25s linear;
+			-o-transition: background-color .25s linear;
+			-ms-transition: background-color .25s linear;
+			transition: background-color .25s linear;
+			color: #ffeb9b;
+		}
+
+		input#search:focus::-webkit-input-placeholder {
+			color: #ffeb9b;
+		}
+		input#search:focus:-moz-placeholder {
+			color: #ffeb9b;
+		}
+		input#search:focus::-moz-placeholder {
+			color: #ffeb9b;
+		}
+		input#search:focus:-ms-input-placeholder {
+			color: #ffeb9b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="header">
+		<nav>
+			<li class="left">
+				<a href="http://www.robertcboll.com" class="name">robertcboll</a>
+			</li>
+		</nav>
+
+		<nav class="green">
+			<li class="right">&nbsp; }</li>
+			<li class="right">
+				<form action="/search" method="get" >
+					<input id="search" type="text" name="q" value="{SearchQuery}" placeholder="search" data-autosize-input="{ 'space': 40}"/>
+				</form>
+			</li>
+			<li class="right">{ &nbsp;</li>
+		</nav>
+	</div>
+
+	<div class="wrapper sticky-wrapper">
+		<section>
+			<div id="title">
+				<h1>{Title}</h1>
+			</div>
+
+			<div id="content">
+				{block:Description}<p class="center">{Description}</p>{/block:Description}
+
+				<div id="posts">
+					{block:Posts}
+
+					{block:Photo}
+					<div class="photo-post">
+						<div class="photo-wrapper">
+							{LinkOpenTag}	
+							<img class="PhotoPostImage" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+							{LinkCloseTag}
+						</div>
+
+						<div class="photo-icon"></div>
+
+						{block:Caption}<div class="photo-caption">{Caption}</div>{/block:Caption}
+
+						{block:Exif}
+						<ol class="camera-meta">
+							<li>{block:Camera}Camera: {Camera}{/block:Camera}</li>
+							<li>{block:Aperture}Aperture: {Aperture}{/block:Aperture}</li>
+							<li>{block:Exposure}Exposure: {Exposure}{/block:Exposure}</li>
+							<li>{block:FocalLength}Focal Length: {FocalLength}{/block:FocalLength}</li>
+						</ol>
+						{/block:Exif}
+					</div>
+					{/block:Photo}
+
+					{block:Photoset}
+					<div class="photoset-post">
+						{block:Photos}
+						{block:HighRes}
+						<a class="highres-photoset" href="{PhotoURL-HighRes}">
+							<img class="photopost-image" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+						</a>
+						{/block:HighRes}
+						{/block:Photos}
+
+						<div class="photoset-small">{Photoset-500}</div>
+
+						<div class="photo-icon"></div>
+						<div class="photo-caption">{Caption}</div> 
+					</div>
+					{/block:Photoset}
+
+					{block:Text}
+					<div class="text-post">
+						<div class="text-icon"></div>
+						{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+
+						<div class="text-body">{Body}</div>			
+					</div>
+					{/block:Text}
+
+					{block:Link}
+					<div class="link-post">
+						<div class="link-icon"></div>
+						<div class="link-title"><a href="{URL}" {Target}>{Name}</a></div>
+
+						{block:Description}<div class="link-description">{Description}</div>{/block:Description}
+					</div>
+					{/block:Link}	
+
+					<div class="post-details credits">
+						{block:Date}
+						<div>
+							<a href="{Permalink}" title="Date Posted">
+								<div class="date-icon"></div>
+								{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+							</a>
+						</div>
+						{/block:Date}
+						{block:HasTags}
+						<div class="tags">
+							<div class="tags-icon"></div>
+							{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
+						</div>
+						{/block:HasTags}
+					</div>
+
+					{block:IfDisqusShortname}
+					<div id="disqus">
+						<script type="text/javascript">
+							var disqus_url = "{Permalink}";
+							var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";
+						</script>
+
+						{block:Permalink}
+						<div id="disqus_thread"></div>
+
+						<script type="text/javascript">
+
+							(function() {
+								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+						{/block:Permalink}
+
+						<script type="text/javascript">
+							var disqus_shortname = '{text:Disqus Shortname}';
+							(function () {
+								var s = document.createElement('script'); s.async = true;
+								s.src = 'http://disqus.com/forums/{text:Disqus Shortname}/count.js';
+								(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+							}());
+						</script>
+					</div>
+					{/block:IfDisqusShortname}
+
+					{/block:Posts}
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="wrapper">
+		<div class="footer credits right">
+			<footer>
+				<div class="pages">
+					<div id="pages-title">
+						page {CurrentPage} <span id="PageOf">of</span> {TotalPages}
+					</div>
+
+					{block:NextPage}
+					<div id="next">
+						<a href="{NextPage}" title="next page">next</a>
+					</div>
+					{/block:NextPage}
+
+					{block:PreviousPage}
+					<div id="previous">
+						<a href="{PreviousPage}" title="previous page">previous</a>
+					</div>
+					{/block:PreviousPage}
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25959308-2']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+	<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
