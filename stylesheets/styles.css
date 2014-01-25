@@ -820,6 +820,11 @@ html, body {
   overflow: hidden;
   position: relative;
 }
+
+iframe{ 
+  display: none; 
+}
+
 .swipe-wrap > div {
   float:left;
   width:100%;
