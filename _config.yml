@@ -1,0 +1,56 @@
+# Harmony Jekyll theme general configurations 
+
+# Base URL
+baseurl: 
+
+# Site live URL
+#url: http://robertcboll.com
+
+# Localhost 
+url: http://127.0.0.1:4000  
+
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: robertcboll;  
+  # Little description about your site
+  #description: "[software engineer]"
+  meta_description: robertcboll; software engineer 
+  basetheme: redish # pre defined thmes are darken, blue-water, redish.
+
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-25959308-2
+
+  # Profile links, leave blank to ignore
+  social: 
+    github: robertcboll
+    twitter: robertcboll
+    linkedin: robertcboll
+    facebook: 
+    gplus:
+    dribble:
+    pinterest: 
+    email: robertcboll@gmail.com
+  # Toggle disclaimer in footer
+  show_disclaimer: false
+
+# Conversion / Build settings 
+markdown:    kramdown
+highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+
+# Permalinks
+permalink:        pretty
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed
