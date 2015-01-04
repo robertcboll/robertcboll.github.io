@@ -1,6 +1,6 @@
 .DS_Store
 
-_*/*
+_site/
 .bundle/*
 Gemfile.lock
 .sass_cache/
