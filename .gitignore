@@ -3,6 +3,8 @@
 _*/*
 .bundle/*
 Gemfile.lock
+.sass_cache/
+_site/
 
 *.iml
 .idea/*
