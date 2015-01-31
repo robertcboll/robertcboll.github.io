@@ -2,8 +2,8 @@ name: "robertcboll"
 description: ""
 author: "robertcboll"
 
-#url: "http://localhost:4000"
-url: "http://robertcboll.com"
+url: "http://localhost:4000"
+#url: "http://robertcboll.com"
 
 markdown: kramdown
 highlighter: pygments
