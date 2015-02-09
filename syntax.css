@@ -1,10 +1,11 @@
-.highlight  { 
+.highlight, blockquote  { 
   background: rgba(211, 211, 211, 0.4);
   border: 2px solid lightgrey;
   border-radius: 6px;
   margin: 10px;
   padding: 10px 20px;
 }
+blockquote p { margin-bottom: 6px; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
