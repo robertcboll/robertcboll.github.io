@@ -1,0 +1,80 @@
+
+==================================================================
+https://keybase.io/robertcboll
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://roboll.io
+  * I am robertcboll (https://keybase.io/robertcboll) on keybase.
+  * I have a public key with fingerprint 48BE B4C0 C4AD 6FDD 2F85  A623 B3F0 EA65 2569 3485
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "48beb4c0c4ad6fdd2f85a623b3f0ea6525693485",
+            "host": "keybase.io",
+            "key_id": "b3f0ea6525693485",
+            "kid": "010137eed0a153aad3f13a2636215c7093f63fd2b0995e9163547f24df920cc1985f0a",
+            "uid": "fe9249dadc915ac1d5fa4378fac9ae19",
+            "username": "robertcboll"
+        },
+        "revoke": {
+            "sig_ids": [
+                "132434e5dde421a4c2fe0ce2c7a1cd543b13e9b8ecad870b1f2ab0c215d3da680f"
+            ]
+        },
+        "service": {
+            "hostname": "roboll.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1436289001,
+    "expire_in": 157680000,
+    "prev": "9652982d29554a05cfdd58de60d5afb5452222c09c37c89bfafc63a2a9823c2e",
+    "seqno": 12,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.20
+Comment: https://keybase.io/crypto
+
+yMN4AnicbZJ7UBVlGMbPkQg5cUIZxpKZBmYdcLQT7v3snuKYeUEwL0k4AsLx22+/
+hR3wLOw5oIebDuVYMqI1w6WIIBAKBrxBpI3Y4KCkBAZZYkIhXQYxmiAYr2jfoZr+
+6ftnZ9993t/77PN+XWYfg8nY+sc4ClfZ/caezqpsQ/wHfrfyCEmTPYQtj0hHcw9F
+daYiPVNXnW7CRrCChCQWkpAFMq/IMq0IHOBpRmIUEgGeozleZFiBIyxEmubydmCM
+BFwoUtVwDb84VBlX/0efPveBpEiKsSIkk4DiGABkRqEYQPMMT1MctJIio/CMItMS
+KYocEime4VirQrOyItIkhJQocAoJMC57DqcgkWZFGchQpDgAKZlTAMtYBQVAESBK
+9ApdSHeCXQirdU1CuhtKWkYGUWAhdJSjpSNvCC41Fft2EbYkgmJolmERJ8uIpSnA
+QlpBJEQ0tAIKyhzLSBSDRElAEMiClZQohQYSCbF7mZEBL5AKkYzZeGiOCufg3qD+
+M4Bn/51Vpq65Nahl4HKa251p8zpyezK9st1IcvwDcEiqU8Yrwg05SHepmpOwUVgJ
+3aqXSLE4OEEkScpCoD2Zqo4cqlfBWbETfLxjUA5GingXokDLtMhxLCA5iJfLCTLi
+SZkDisSxHI0PJEXIWKEgSgpQII8XA3ATA2lEeH8py6lhNo19glTMxKk5gTtbR0TB
++c4dTxiMJsOTvvO8t8xg8l/w792L5QIfZ60o8rFH9l/ubTy37r23Rgf2Ta2drCfj
+COuK/KgNw9MPKnyjB/ipDPc7zMijsBcDlh07nFK7pL6rfmIwOaFx147Xw7YfuF3p
+WbN6NoFOfPiLEJ5z5l5fyfzk9moxvSzeHrjGPurZ8v6vk0k1/pN1UXv6E6s2hqXe
+rVHHAj2hjdTAm4vNR1uY8A2ulZ/sTTSXSav3djcfmShPLk3o0+yDnxuOG4+ly6UL
+y66VfPhsVIch9/jg5Y8LjYsqI36/6jTmBtyrPhsUPzTT2HS0/+uCsazTIbbZoGun
+2i693Fz3fNz4FVOdpcp3JKKoomiZPWJLce1s3uZF4aaAPkvzYaZ0+2OlbeZ+mt+J
+73s2Jo+Qyx/Ob7tf/carfu6vQnc3PWh9VJL/jOWL9bEzo/Xh077vujYtSPmtMOaI
+HLz/LrFqOnBlUva5joG0p/1bxtLWvZIyMjb+gmPss76nGl77znzgUFOspNOfXulz
+lKWEvrR1aczSkKFtFc7rwZHrsydMPuK+U2bSp7L70pmfTzOO8uCFq7rLO2/mx3js
+3x70L4y/tRM9N+9kdIeh5850+8E43ztXg8pDfppZcr6qt9d/5wWqOfrPG6OV8zLX
+JhXmtk61dLUPmqaWF1xo3+q6yJiv/3Ao72LNJvWbE0RQ6NmGoIZtFh0Ni6Nvf1lU
+LN38Ud8MOzKGi2/UfrQYFA05b1tO/gWq2cTJ
+=ufpY
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/robertcboll
+
+==================================================================
