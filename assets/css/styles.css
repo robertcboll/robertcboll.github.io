@@ -22,6 +22,10 @@ body {
 	body {
 		background-color: initial;
 	}
+
+	.nopdf {
+		display: none;
+	}
 }
 
 h1 {
