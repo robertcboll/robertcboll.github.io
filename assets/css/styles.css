@@ -14,6 +14,16 @@ body {
 	color: #4D7A97;
 }
 
+@media print {
+	* {
+		font-size: 0.95em;
+	}
+
+	body {
+		background-color: initial;
+	}
+}
+
 h1 {
 	font-size: 3em;
 	font-weight: 400;
